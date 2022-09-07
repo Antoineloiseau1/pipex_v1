@@ -1,0 +1,3 @@
+ceci est un fichier texte,
+je voudrais ecrire le nombre de lignes
+dans un autre fichier texte.
