@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   get_args.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 13:46:38 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/07 13:29:50 by anloisea         ###   ########.fr       */
+/*   Created: 2022/09/08 14:34:15 by antoine           #+#    #+#             */
+/*   Updated: 2022/09/08 14:40:34 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "pipex.h"
 #include "../libft/libft.h"
-#include "../pipex.h"
 
-int	main(int argc, char *argv[], char *envp[])
+char	**get_args(char *argv)
 {
-	(void)argc;
-	char	**paths = get_paths(envp);
-	int		i;
+	char **args;
+	int	i;
 
 	i = 0;
-	while (paths[i])
+	while(argv[i])
 	{
-		if (check_path(paths, argv[1]) == 0)
-			execve(ft_strjoin(paths[i], argv[1]), argv + 1, envp);
+		args[i] = ft_split(argv, ' ');
 		i++;
 	}
-	return (0);
+	return (args);
 }

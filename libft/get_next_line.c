@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 16:50:06 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/05 15:06:29 by anloisea         ###   ########.fr       */
+/*   Updated: 2022/09/08 12:59:36 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(const char *buf, const char *save)
+char	*ft_join(const char *buf, const char *save)
 {
 	int		i;
 	char	*join;
@@ -108,7 +108,7 @@ char	*ft_read_file(int fd, char *save)
 			return (NULL);
 		}
 		buf[bytes] = '\0';
-		save = ft_strjoin(buf, save);
+		save = ft_join(buf, save);
 	}
 	free(buf);
 	return (save);
@@ -116,10 +116,10 @@ char	*ft_read_file(int fd, char *save)
 
 char	*get_next_line(int fd)
 {
-	static char	*save[OPEN_MAX];
+	static char	*save[256];	//256 == OPEN_MAX
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > OPEN_MAX)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 256)
 		return (NULL);
 	save[fd] = ft_read_file(fd, save[fd]);
 	if (!save[fd])

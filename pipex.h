@@ -3,17 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 09:39:57 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/07 13:23:49 by anloisea         ###   ########.fr       */
+/*   Updated: 2022/09/08 14:37:52 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PIPEX_H
 # define PIPEX_H
 
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <sys/wait.h>
+# include "./libft/libft.h"
+
 char	**get_paths(char **envp);
-int	check_path(char **paths, char *cmd);
+char	*check_path(char **paths, char *cmd);
 
 #endif
