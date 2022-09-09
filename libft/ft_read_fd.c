@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.h                                            :+:      :+:    :+:   */
+/*   ft_read_fd.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 09:39:57 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/09 14:56:02 by anloisea         ###   ########.fr       */
+/*   Created: 2022/09/09 16:41:29 by anloisea          #+#    #+#             */
+/*   Updated: 2022/09/09 16:44:24 by anloisea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_H
-# define PIPEX_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <fcntl.h>
-# include <sys/wait.h>
-# include "./libft/libft.h"
+void	ft_read_fd(int fd)
+{
+	char	*file;
 
-char	**get_paths(char **envp);
-char	*check_path(char **paths, char *cmd);
-char	**get_args(char *cmd);
-
-#endif
+	file = "";
+	while (file)
+	{
+		file = get_next_line(fd);
+		ft_printf(file);
+	}
+}

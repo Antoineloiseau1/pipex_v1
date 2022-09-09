@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check_path.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 13:09:07 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/08 13:12:12 by antoine          ###   ########.fr       */
+/*   Updated: 2022/09/09 17:49:42 by anloisea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "../libft/libft.h"
+#include "../pipex.h"
 
 char	*check_path(char **paths, char *cmd)
 {
@@ -29,5 +28,6 @@ char	*check_path(char **paths, char *cmd)
 		i++;
 	}
 	free(cmd_path);
-	return (NULL);
+	free(paths);
+	exit(5);
 }

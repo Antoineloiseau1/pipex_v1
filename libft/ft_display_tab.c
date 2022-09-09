@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_args.c                                         :+:      :+:    :+:   */
+/*   ft_display_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/08 14:34:15 by antoine           #+#    #+#             */
-/*   Updated: 2022/09/08 14:40:34 by antoine          ###   ########.fr       */
+/*   Created: 2022/09/09 15:06:13 by anloisea          #+#    #+#             */
+/*   Updated: 2022/09/09 15:48:34 by anloisea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
-#include "../libft/libft.h"
+#include "libft.h"
 
-char	**get_args(char *argv)
+void	ft_display_tab(char **tab)
 {
-	char **args;
 	int	i;
 
 	i = 0;
-	while(argv[i])
+	while (tab[i])
 	{
-		args[i] = ft_split(argv, ' ');
+		ft_printf("%s\n", tab[i]);
 		i++;
 	}
-	return (args);
 }

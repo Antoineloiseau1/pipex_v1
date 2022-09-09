@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: antoine <antoine@student.42.fr>            +#+  +:+       +#+         #
+#    By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/06 15:25:26 by anloisea          #+#    #+#              #
-#    Updated: 2022/09/08 14:45:31 by antoine          ###   ########.fr        #
+#    Updated: 2022/09/09 16:59:58 by anloisea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CFLAGS	= 	-Wall -Werror -Wextra
 
 LIB		=	libft/libft.a
 
-LPATH	= ./libft
+LPATH	= 	./libft
 
 all:		${LIB} ${NAME}
 
