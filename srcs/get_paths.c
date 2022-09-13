@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_paths.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 09:29:17 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/09 13:36:48 by anloisea         ###   ########.fr       */
+/*   Updated: 2022/09/13 15:07:55 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	**get_paths(char **envp)
 	char	**paths;
 	char	*tmp;
 	int		i;
-
+	
 	i = 0;
 	while (envp[i])
-	{
+	{	
 		tmp = ft_strnstr(envp[i], "PATH=", ft_strlen(envp[i]));
 		if (tmp)
 			env_path = ft_substr(envp[i], 5, ft_strlen(envp[i]));
@@ -33,7 +33,6 @@ char	**get_paths(char **envp)
 	while (paths[i])
 	{
 		tmp = paths[i];
-		free(paths[i]);
 		paths[i] = ft_strjoin(tmp, "/");
 		i++;
 	}
