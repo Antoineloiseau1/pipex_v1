@@ -6,7 +6,7 @@
 /*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 09:39:57 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/13 19:16:52 by antoine          ###   ########.fr       */
+/*   Updated: 2022/09/14 11:18:03 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <sys/wait.h>
-# include "./libft/libft.h"
+# include "../libft/libft.h"
 # include <stdio.h>
 # include <errno.h>
 # include <string.h>
@@ -38,6 +38,8 @@ char	**get_paths(char **envp);
 char	*check_path(char **paths, char *cmd);
 char	**get_args(char *cmd);
 void	error(int errnum, char *arg);
-void	child1(int pid, char *argv, int pipe[], char *envp[], char **args);
+void	cmd1(char **paths, char *envp[], char *argv[], int fd[]);
+void	cmd2(char **paths, char *envp[], char *argv[], int fd[], int argc);
+void	ft_exit(void);
 
 #endif

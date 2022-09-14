@@ -6,11 +6,11 @@
 /*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 13:09:07 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/13 18:36:36 by antoine          ###   ########.fr       */
+/*   Updated: 2022/09/14 10:54:34 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../pipex.h"
+#include "pipex.h"
 
 char	*check_path(char **paths, char *cmd)
 {
