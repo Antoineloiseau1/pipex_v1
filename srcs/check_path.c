@@ -6,7 +6,7 @@
 /*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 13:09:07 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/15 14:04:06 by anloisea         ###   ########.fr       */
+/*   Updated: 2022/09/15 14:57:27 by anloisea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ char	*check_path(char **paths, char *cmd)
 			return (cmd_path);
 		i++;
 	}
+	ft_putstr_fd("pipex: ", 2);
 	ft_putstr_fd(cmd, 2);
 	ft_putstr_fd(": command not found\n", 2);
-	exit(errno);
+	return (NULL);
 }

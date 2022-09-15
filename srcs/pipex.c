@@ -6,7 +6,7 @@
 /*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 13:46:38 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/15 14:33:58 by anloisea         ###   ########.fr       */
+/*   Updated: 2022/09/15 15:04:06 by anloisea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ int	main(int argc, char *argv[], char *envp[])
 	path[0] = check_path(paths, argv[2]);
 	path[1] = check_path(paths, argv[3]);
 	pipe(fd);
-	cmd1(path[0], envp, argv, fd);
+	if (path[0])
+		cmd1(path[0], envp, argv, fd);
 	close(fd[1]);
 	cmd2(path[1], envp, argv, fd);
 	close(fd[0]);

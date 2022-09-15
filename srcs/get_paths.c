@@ -6,7 +6,7 @@
 /*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 09:29:17 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/15 14:43:13 by anloisea         ###   ########.fr       */
+/*   Updated: 2022/09/15 14:53:05 by anloisea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*search_for_path(char **envp)
 	{	
 		tmp = ft_strnstr(envp[i], "PATH=", ft_strlen(envp[i]));
 		if (tmp)
-			env_path = ft_substr(envp[i], 5, ft_strlen(envp[i]));
+			return (env_path = ft_substr(envp[i], 5, ft_strlen(envp[i])));
 		i++;
 	}
 	return (NULL);
