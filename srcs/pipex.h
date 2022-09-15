@@ -6,7 +6,7 @@
 /*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 09:39:57 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/15 14:42:11 by anloisea         ###   ########.fr       */
+/*   Updated: 2022/09/15 16:35:54 by anloisea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ char	**get_paths(char **envp);
 char	*check_path(char **paths, char *cmd);
 char	**get_args(char *cmd);
 void	error(char *arg);
-void	cmd1(char *path, char *envp[], char *argv[], int fd[]);
-void	cmd2(char *path, char *envp[], char *argv[], int fd[]);
+void	cmd1(char **paths, char *envp[], char *argv[], int fd[]);
+void	cmd2(char **paths, char *envp[], char *argv[], int fd[]);
 void	ft_exit(void);
 void	free_paths(char **paths);
 char	*search_for_path(char **envp);

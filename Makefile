@@ -6,7 +6,7 @@
 #    By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/06 15:25:26 by anloisea          #+#    #+#              #
-#    Updated: 2022/09/15 12:17:31 by anloisea         ###   ########.fr        #
+#    Updated: 2022/09/15 18:15:27 by anloisea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,3 @@ fclean:		clean
 re:			fclean all
 
 .PHONY:		all clean fclean re
-
-
-
-
