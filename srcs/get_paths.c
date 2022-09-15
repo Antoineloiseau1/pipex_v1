@@ -6,11 +6,11 @@
 /*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 09:29:17 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/13 15:07:55 by antoine          ###   ########.fr       */
+/*   Updated: 2022/09/14 10:55:18 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
+#include "pipex.h"
 
 char	**get_paths(char **envp)
 {

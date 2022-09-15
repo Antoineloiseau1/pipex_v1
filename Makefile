@@ -6,13 +6,14 @@
 #    By: antoine <antoine@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/06 15:25:26 by anloisea          #+#    #+#              #
-#    Updated: 2022/09/13 19:19:23 by antoine          ###   ########.fr        #
+#    Updated: 2022/09/14 11:12:12 by antoine          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	pipex
 
-SRCS 	= 	./srcs/pipex.c ./srcs/get_paths.c ./srcs/check_path.c ./srcs/error.c
+SRCS 	= 	./srcs/pipex.c ./srcs/get_paths.c ./srcs/check_path.c ./srcs/error.c \
+			./srcs/childs.c
 
 OBJS	=	${SRCS:.c=.o}
 
