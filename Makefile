@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: antoine <antoine@student.42.fr>            +#+  +:+       +#+         #
+#    By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/06 15:25:26 by anloisea          #+#    #+#              #
-#    Updated: 2022/09/14 11:12:12 by antoine          ###   ########.fr        #
+#    Updated: 2022/09/15 12:17:31 by anloisea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	pipex
 
 SRCS 	= 	./srcs/pipex.c ./srcs/get_paths.c ./srcs/check_path.c ./srcs/error.c \
-			./srcs/childs.c
+			./srcs/childs.c ./srcs/free_paths.c
 
 OBJS	=	${SRCS:.c=.o}
 

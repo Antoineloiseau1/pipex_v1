@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_read_fd.c                                       :+:      :+:    :+:   */
+/*   free_paths.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 16:41:29 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/15 14:29:43 by anloisea         ###   ########.fr       */
+/*   Created: 2022/09/15 12:15:54 by anloisea          #+#    #+#             */
+/*   Updated: 2022/09/15 14:31:55 by anloisea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "pipex.h"
 
-void	ft_read_fd(int fd)
+void	free_paths(char **paths)
 {
-	char	*file;
+	int	i;
 
-	file = "";
-	while (file)
+	i = 0;
+	while (paths[i])
 	{
-		file = get_next_line(fd);
-		ft_printf(file);
+		free(paths[i]);
+		i++;
 	}
+	free(paths);
 }

@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   get_paths.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 09:29:17 by anloisea          #+#    #+#             */
-/*   Updated: 2022/09/14 10:55:18 by antoine          ###   ########.fr       */
+/*   Updated: 2022/09/15 14:43:13 by anloisea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-char	**get_paths(char **envp)
+char	*search_for_path(char **envp)
 {
 	char	*env_path;
-	char	**paths;
-	char	*tmp;
 	int		i;
-	
+	char	*tmp;
+
+	env_path = NULL;
 	i = 0;
 	while (envp[i])
 	{	
@@ -27,6 +27,19 @@ char	**get_paths(char **envp)
 			env_path = ft_substr(envp[i], 5, ft_strlen(envp[i]));
 		i++;
 	}
+	return (NULL);
+}
+
+char	**get_paths(char **envp)
+{
+	char	*env_path;
+	char	**paths;
+	char	*tmp;
+	int		i;
+
+	env_path = search_for_path(envp);
+	if (env_path == NULL)
+		error("path not found");
 	paths = ft_split(env_path, ':');
 	free(env_path);
 	i = 0;
@@ -34,6 +47,7 @@ char	**get_paths(char **envp)
 	{
 		tmp = paths[i];
 		paths[i] = ft_strjoin(tmp, "/");
+		free(tmp);
 		i++;
 	}
 	return (paths);

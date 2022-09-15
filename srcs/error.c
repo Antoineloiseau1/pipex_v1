@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anloisea <anloisea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 16:49:47 by antoine           #+#    #+#             */
-/*   Updated: 2022/09/14 11:04:30 by antoine          ###   ########.fr       */
+/*   Updated: 2022/09/15 14:31:30 by anloisea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ void	ft_exit(void)
 	exit(EXIT_FAILURE);
 }
 
-void	error(int errnum, char *arg)
+void	error(char *arg)
 {
+	ft_putstr_fd("pipex: ", 2);
 	perror(arg);
-	exit(errnum);
+	exit(errno);
 }
